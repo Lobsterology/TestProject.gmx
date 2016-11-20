@@ -1,26 +1,21 @@
 //draw_healthbar(10,10,100,100,player.health,c_red,c_green,c_black,0,true,true);
 //Shortcuts for keypresses
-playerSpeed = 5;
-MOVELEFT = keyboard_check(ord('A'));
-MOVERIGHT = keyboard_check(ord('D'));
-MOVEUP = keyboard_check(ord('W'));
-MOVEDOWN = keyboard_check(ord('S'));
-if (MOVELEFT && x > sprite_width/2) 
+
+MOVELEFT = keyboard_check(vk_left);
+MOVERIGHT = keyboard_check(vk_right);
+MOVEUP = keyboard_check(vk_up);
+MOVEDOWN = keyboard_check(vk_down);
+if (MOVELEFT /*&& x > sprite_width/2*/) 
 { 
     player.x -= playerSpeed; 
 }
  
-if (MOVERIGHT && x < room_width - sprite_width/2) 
+if (MOVERIGHT /*&& x < room_width - sprite_width/2*/) 
 { 
     player.x += playerSpeed; 
 }
  
-if (MOVEUP && y > room_height/2) 
+if (MOVEUP /*&& y > room_height/2*/) 
 { 
     player.y -= playerSpeed; 
-}
- 
-if (MOVEDOWN && y < room_height - sprite_width/2) 
-{ 
-    player.y += playerSpeed; 
 }
